@@ -94,7 +94,10 @@ const Wrapped: FunctionComponent = () => {
 						></input>
 						<div
 							className="h-full w-auto bg-default-orange p-2 hover:cursor-pointer hover:bg-[#a65b42]"
-							onClick={() => handleSubmit()}
+							onClick={() => {
+								handleSubmit();
+								setTextInput("");
+							}}
 						>
 							<RiQuillPenLine className="h-max w-12" />
 						</div>
@@ -114,22 +117,22 @@ const Wrapped: FunctionComponent = () => {
 					char={{
 						name: "Fredico The Noble",
 						lvl: 10,
-						race: "Warlock",
+						race: "Dragonborn",
 					}}
 				/>
 				<CharacterCard
 					char={{
-						name: "Lizzy B",
+						name: "Angular Hater",
 						lvl: 11,
-						race: "Goblin",
+						race: "Giant",
 					}}
 				/>
 				<CharacterCard
-					char={{
-						name: "Lizzy B",
-						lvl: 5,
-						race: "Goblin",
-					}}
+				// char={{
+				// 	name: "Lizzy B",
+				// 	lvl: 5,
+				// 	race: "Goblin",
+				// }}
 				/>
 			</div>
 		</main>

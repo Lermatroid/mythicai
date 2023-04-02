@@ -13,7 +13,7 @@ function CharacterMessage({ message }: Props) {
 				<div className="m-8 flex flex-col">
 					{/* <img src="" /> */}
 					<RxAvatar className="mt-2 h-12 w-12 self-start" />
-					<div className="min-h-[2rem] min-w-[50%] rounded-lg bg-default-orange p-4">
+					<div className="min-h-[2rem] min-w-[50%] rounded-lg bg-default-orange p-4 text-default-orange">
 						<p>{message.message}</p>
 					</div>
 				</div>
