@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
-import PlayerCard from "~/components/PlayerCard";
+import CharacterCard from "~/components/CharacterCard";
+import { Character } from "~/utils/character";
 
 const GamePage: NextPage = (props) => {
 	return (
@@ -11,11 +12,17 @@ const GamePage: NextPage = (props) => {
 				AI
 			</h1>
 			<div className="mt-10 grid aspect-video w-full max-w-[1250px] grid-cols-5 gap-2">
-				<PlayerCard />
+				<CharacterCard
+					char={{
+						name: "Lizzy B",
+						lvl: 5,
+						race: "Dragonborn",
+					}}
+				/>
 				<div className="col-span-3 row-span-2 h-full rounded border-2 border-default-orange bg-gray-500 bg-opacity-50"></div>
-				<PlayerCard />
-				<PlayerCard />
-				<PlayerCard />
+				<CharacterCard />
+				<CharacterCard />
+				<CharacterCard />
 			</div>
 		</main>
 	);
